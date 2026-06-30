@@ -1970,6 +1970,10 @@ body.cart-open {
   overflow: hidden;
 }
 
+body.cart-open .mobile-bottom-bar {
+  display: none !important;
+}
+
 /* ==========================================
    CART DRAWER
    ========================================== */
@@ -1981,6 +1985,7 @@ body.cart-open {
   width: 420px;
   max-width: 100vw;
   height: 100vh;
+  height: 100dvh;
   background: var(--bg-secondary);
   border-left: 1px solid var(--border-subtle);
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
@@ -2048,6 +2053,7 @@ body.cart-open {
 
 .cart-drawer-footer {
   padding: 20px 24px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid var(--border-subtle);
   flex-shrink: 0;
 }
